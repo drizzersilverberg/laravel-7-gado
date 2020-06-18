@@ -29,16 +29,14 @@ class RegistrationTest extends TestCase
         $response = $this->submitForm('Register', [
             'name'     => 'Richard Hendricks',
             'email'    => 'richard.hendricks@piedpiper.com',
-            'password' => 'secret',
-            'password_confirmation' => 'secret',
+            'password' => 'password', // password must at least 8 character
+            'password_confirmation' => 'password', // // password must at least 8 character
         ]);
 
-        // $response->dump();
-
         // user should see the current page as the home page
-        // $this->seePageIs('/home');
+        $this->seePageIs('/home');
 
         // user should see the `Dashboard` text in the page
-        // $this->seeText('Dashboard');
+        $this->seeText('Dashboard');
     }
 }
