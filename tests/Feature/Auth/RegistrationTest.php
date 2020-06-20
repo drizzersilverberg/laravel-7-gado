@@ -14,9 +14,8 @@ class RegistrationTest extends TestCase
     /** @test */
     public function guest_users_can_access_register_page()
     {
-        $response = $this->call('GET', '/register');
-
-        $this->assertEquals(200, $response->status());
+        $this->visit('/register');
+        $this->seePageIs('/register');
     }
 
     /** @test */

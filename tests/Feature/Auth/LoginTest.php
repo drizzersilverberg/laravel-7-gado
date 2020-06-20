@@ -15,9 +15,8 @@ class LoginTest extends TestCase
     /** @test */
     public function guest_users_can_access_login_page()
     {
-        $response = $this->call('GET', '/login');
-
-        $this->assertEquals(200, $response->status());
+        $this->visit('/login');
+        $this->seePageIs('/login');
     }
 
     /** @test */
