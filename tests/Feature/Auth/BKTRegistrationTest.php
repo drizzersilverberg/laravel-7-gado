@@ -6,7 +6,7 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 
-class RegistrationTest extends TestCase
+class BKTRegistrationTest extends TestCase
 {
     // do the database migration before tests performed
     use RefreshDatabase;
