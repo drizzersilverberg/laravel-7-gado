@@ -14,8 +14,9 @@ class RegistrationTest extends TestCase
     /** @test */
     public function guest_users_can_access_register_page()
     {
-        $this->visit('/register');
-        $this->seePageIs('/register');
+        $this->visit('/register')
+            ->seePageIs('/register')
+            ->seeText('Register');
     }
 
     /** @test */

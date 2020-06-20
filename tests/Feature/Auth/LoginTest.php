@@ -15,8 +15,9 @@ class LoginTest extends TestCase
     /** @test */
     public function guest_users_can_access_login_page()
     {
-        $this->visit('/login');
-        $this->seePageIs('/login');
+        $this->visit('/login')
+            ->seePageIs('/login')
+            ->seeText('Login');
     }
 
     /** @test */
@@ -60,6 +61,17 @@ class LoginTest extends TestCase
         // TODO: try the redirect method instead of seePageIs
         $this->seePageIs('/home');
     }
-
-    // TODO: logout
+    
+    /** @test */
+    public function auth_users_can_do_logout()
+    {
+        // prepare and create user for the scenario
+        $registeredUser = factory(User::class)->create();
+        
+        // act as the user
+        // $this->actingAs($registeredUser)
+        //     ->visit('home')
+        //     ->click('Logout') // JS doesn't work
+        //     ->seePageIs($this->baseUrl);
+    }
 }
