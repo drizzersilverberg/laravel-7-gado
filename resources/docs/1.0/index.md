@@ -1,2 +1,3 @@
 - ## Get Started
     - [Overview](/{{route}}/{{version}}/overview)
+    - [Packages Tried](/{{route}}/{{version}}/packages-tried)
